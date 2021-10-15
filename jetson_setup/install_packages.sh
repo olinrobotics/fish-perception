@@ -1,6 +1,6 @@
 #!/bin/bash
 source ~/.bashrc
-apt install python3-pip -y
+apt install python-pip -y
 apt install curl -y
 apt install wireshark -y
 
