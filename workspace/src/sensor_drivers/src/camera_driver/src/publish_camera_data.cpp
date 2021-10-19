@@ -68,7 +68,7 @@ class CameraDriver
             img_bridge = cv_bridge::CvImage(header, sensor_msgs::image_encodings::RGB8, img);
             try
             {
-                img_bridge.toImageMsg(img_msg); // from cv_bridge to sensor_msgs::Image
+                img_bridge.toImageMsg(msg); // from cv_bridge to sensor_msgs::Image
             }
             catch (cv_bridge::Exception& e)
             {
@@ -90,6 +90,7 @@ class CameraDriver
                 convert_to_ros(cam_info_.img, img_msg_, msg_header_, img_bridge_));
 
                 // publish image
+                img_pub_.publish(img_msg_);
 
                 ros::spinOnce();
             }
