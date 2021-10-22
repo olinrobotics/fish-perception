@@ -4,7 +4,7 @@ set(PROJECTNAME "camera_driver")
 project(${PROJECTNAME})
 
 ## Compile as C++11, supported in ROS Kinetic and newer
-add_compile_options(-std=c++11)
+add_compile_options(-std=c++14)
 
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
@@ -65,8 +65,8 @@ include_directories(
 ## With catkin_make all packages are built within a single CMake context
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/sensor_drivers_node.cpp)
-add_executable(publish_image_node src/publish_camera_data.cpp)
-target_link_libraries(publish_image_node ${catkin_LIBRARIES} ${OpenCV_INCLUDE_DIRS})
+add_executable(camera_driver_node src/publish_camera_data.cpp)
+target_link_libraries(camera_driver_node ${catkin_LIBRARIES} ${OpenCV_INCLUDE_DIRS})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
