@@ -9,7 +9,6 @@ apt install ros-melodic-cv-bridge
 apt install ros-melodic-sensor-msgs
 
 # create link for opencv
-ln -s /usr/include/opencv4/opencv2/ /usr/include/opencv
 ln -s /usr/include/opencv4/opencv2/ /usr/include/opencv4
 
 # gpio interface with python

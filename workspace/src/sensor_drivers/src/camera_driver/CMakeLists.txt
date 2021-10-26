@@ -66,7 +66,7 @@ include_directories(
 ## The recommended prefix ensures that target names across packages don't collide
 # add_executable(${PROJECT_NAME}_node src/sensor_drivers_node.cpp)
 add_executable(camera_driver_node src/publish_camera_data.cpp)
-target_link_libraries(camera_driver_node ${catkin_LIBRARIES} ${OpenCV_INCLUDE_DIRS})
+target_link_libraries(camera_driver_node ${catkin_LIBRARIES} ${OpenCV_INCLUDE_DIRS} ${OpenCV_LIBS})
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
