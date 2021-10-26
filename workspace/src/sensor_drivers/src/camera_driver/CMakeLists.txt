@@ -4,7 +4,8 @@ set(PROJECTNAME "camera_driver")
 project(${PROJECTNAME})
 
 ## Compile as C++14, supported in ROS Kinetic and newer
-set(CMAKE_CXX_FLAGS "-std=c++14")
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_compile_options(-std=c++14)
 
 ## Find catkin macros and libraries
